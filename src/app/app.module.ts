@@ -50,7 +50,7 @@ import { ContarezNousComponent } from './components/products/contarez-nous/conta
     EffectsModule.forRoot([OffresEffects]),
     StoreDevtoolsModule.instrument(),
     FormsModule,
-    ReactiveFormsModule,
+    ReactiveFormsModule
     
   ],
   providers: [],
