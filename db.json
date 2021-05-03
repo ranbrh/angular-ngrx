@@ -1,0 +1,39 @@
+{
+  "offres": [
+    {
+      "id": 1,
+      "employ": "Mr Kmel amine",
+      "villedep": "Alger",
+      "villeariv": "Cheraga",
+      "date": "30/02/2021"
+    },
+    {
+      "id": 2,
+      "employ": "Mr Bouchane mohamed",
+      "villedep": "Alger",
+      "villeariv": "Dely brahim",
+      "date": "11/04/2021"
+    },
+    {
+      "id": 3,
+      "employ": "Mme nasef amina",
+      "villedep": "Tiziouzou",
+      "villeariv": "Blida",
+      "date": "07/11/2020"
+    },
+    {
+      "id": 4,
+      "employ": "Mr Hachemi omar",
+      "villedep": "Alger ouest",
+      "villeariv": "Annaba",
+      "date": "10/02/2018"
+    },
+    {
+      "employ": "Mr Hachemi omar",
+      "villedep": "Alger ouest",
+      "villeariv": "Alger centre",
+      "date": "10/02/2017",
+      "id": 5
+    }
+  ]
+}

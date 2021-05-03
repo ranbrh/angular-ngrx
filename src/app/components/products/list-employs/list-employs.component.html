@@ -1,0 +1,21 @@
+<div class="container">
+<h3>List des Employés : </h3>
+
+<table class ="table">
+   <tr style="background-color:#d65757">
+    <th>ID</th><th>Nom</th><th>Prenom </th><th>Genre </th>
+  </tr>
+
+    <tr  *ngFor ="let e of employs" >
+        <th>{{e.id}}</th>
+        <th>{{e.nom}}</th>
+        <th>{{e.prenom}}</th>
+        <th>{{e.genre}}</th>
+
+
+    </tr>
+
+ 
+  
+</table>
+</div>

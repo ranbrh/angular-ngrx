@@ -1,0 +1,47 @@
+<div class = "container">
+  
+      <ng-container *ngIf="$any(state).dataState==ProducstStateEnum.LOADING" >
+                   Loading .....
+      </ng-container>
+      <ng-container *ngIf="$any(state).dataState==ProducstStateEnum.UPDATED" >
+         <div class = "alert-succes container p-3 m-3">
+                <spam>Product Saved Successfully</spam>
+                <button class ="btn btn-success ml-2" (click)="okUpdated()"> OK ! mis a jour </button>
+         </div>
+      </ng-container>   
+      <ng-container *ngIf="$any(state).dataState==ProducstStateEnum.LOADED">
+        <ng-container *ngIf="formBuilt" >
+            <form [formGroup]="offreFormGroup" (ngSubmit) ="onUpdateOffre()">
+             <div class ="form-group">
+               <label for = "name"> ID </label>
+               
+               <input type = "hidden" class ="form-control" formControlName = "id" id = "id" > 
+             </div>
+
+             <div class ="form-group">
+               <label for = "name"> informations d'Employé  </label>
+               <input type = "text" class ="form-control" formControlName = "employ" id = "employ" >
+               
+             </div>
+               
+             <div class ="form-group">
+              <label for = "price"> Ville de départ</label>
+              <input type = "text" class ="form-control" formControlName = "villedep" id = "villedep">  
+           </div>
+           <div class ="form-group">
+             <label for = "price"> Ville d'arrivé </label>
+             <input type = "text" class ="form-control" formControlName = "villeariv" id = "villeariv">  
+          </div>
+         
+           <div class ="form-group">
+              <label for = "quantity"> la Date </label>
+              <input type = "text" class ="form-control" formControlName = "date" id = "date">  
+           </div>
+
+             <button type = "submit" class ="btn btn-success"> Save </button>
+           </form> 
+        </ng-container>
+     </ng-container>
+         
+</div>
+   

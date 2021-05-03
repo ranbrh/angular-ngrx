@@ -1,0 +1,51 @@
+<div class = "container">
+    <ng-container *ngIf="productFormGroup">
+
+      <ng-container *ngIf="state as data" >
+         <ng-container *ngIf="data.dataState==ProducstStateEnum.LOADING" >
+                   Loading .....
+         </ng-container>
+         <ng-container *ngIf="data.dataState==ProducstStateEnum.ERROR" >
+            {{state.errorMessage}}
+         </ng-container>
+         <ng-container *ngIf="data.dataState==ProducstStateEnum.LOADED" >
+            <div class = "alert-succes container p-3 m-3">
+                <span>Product Saved Successfully</span>
+                <button class ="btn btn-success ml-3" (click)="onNewOffre()"> Add the New Offre </button>
+             </div>
+         </ng-container>
+            
+         <ng-container *ngIf="data.dataState==ProducstStateEnum.NEW">
+           <form  [formGroup]="productFormGroup" (ngSubmit) ="onSaveOffre()">
+             <div class ="form-group">
+                 <label for = "employ"> Employé : nom/prenom</label>
+                <input type = "text" class ="form-control" formControlName = "employ" id = "employ" [ngClass]="{'is-invalid':submitted && productFormGroup.controls.name.errors}">
+                <div *ngIf="submitted && productFormGroup.controls.employ.errors" claas = "invalid-feedback">
+                  <div *ngIf="productFormGroup.controls.employ.errors.required"> Name is required</div>
+                </div>  
+             </div>
+                
+             <div class ="form-group">
+                <label for = "price"> Ville de départ</label>
+                <input type = "text" class ="form-control" formControlName = "villedep" id = "villedep">  
+             </div>
+             <div class ="form-group">
+               <label for = "price"> Ville d'arrivé </label>
+               <input type = "text" class ="form-control" formControlName = "villeariv" id = "villeariv">  
+            </div> 
+           
+              <div class ="form-group">
+                <label for = "date"> la Date </label>
+                <input type = "text" class ="form-control" formControlName = "date" id = "date">  
+             </div> 
+
+             
+             <button type = "submit" class ="btn btn-success"> Enregistrer l'offre </button>
+            </form>
+         </ng-container>
+
+      </ng-container>
+   
+    </ng-container>
+   </div>
+   

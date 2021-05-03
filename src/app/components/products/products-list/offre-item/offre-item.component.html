@@ -1,0 +1,17 @@
+<tr *ngIf="product">
+  <td>{{product.id}}</td>
+  <td>{{product.employ}}</td>
+  <td>{{product.villedep}}</td>
+  <td>{{product.villeariv}}</td>
+  <td>{{product.date}}</td>
+  
+  <td>
+    <button (click) ="onDelete(product)" class = "btn btn-danger">
+      <i class="fa fa-trash"></i>
+    </button>
+    <td>
+      <button (click) ="onEdit(product)" class = "btn btn-success">
+        <i class="fa fa-edit"></i>
+      </button>
+  </td>
+</tr>

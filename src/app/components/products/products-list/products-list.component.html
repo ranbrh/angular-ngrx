@@ -1,0 +1,6 @@
+<table class="table" *ngIf="state">
+  <tr style="background-color:#d65757">
+    <th>ID</th><th>Employe</th><th>Ville depart</th><th>ville arrivé</th><th>Date</th>
+  </tr>
+  <app-prdouct-item *ngFor="let product of state.products" [product]="product" style="display: contents"></app-prdouct-item>
+</table>
